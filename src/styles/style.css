@@ -225,12 +225,6 @@ header {
   padding: 7rem 1rem;
 }
 
-@media screen and (min-width: 700) {
-  header {
-    max-height: 12rem;
-  }
-}
-
 .header-btn {
   /* align-self: flex-start; */
   margin: 2rem auto 0;
