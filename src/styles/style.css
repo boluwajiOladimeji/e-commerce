@@ -206,7 +206,7 @@ nav {
 
 header {
   /* background: blue; */
-  /* min-height: calc(100vh - 80px); */
+  min-height: calc(100vh - 80px);
   display: flex;
   /* align-items: center; */
   justify-content: center;
@@ -222,7 +222,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 12rem 1rem;
+  padding: 7rem 1rem;
+}
+
+@media screen and (min-width: 700) {
+  header {
+    max-height: 15rem;
+  }
 }
 
 .header-btn {
