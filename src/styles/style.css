@@ -208,7 +208,7 @@ header {
   /* background: blue; */
   min-height: calc(100vh - 80px);
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
