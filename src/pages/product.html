@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+
+    <!-- <link rel="stylesheet" href="./src/styles/product.css" /> -->
+
+    <!-- script -->
+    <script src="./src/js/index.js" type="module" defer></script>
+    <title>Elias Store</title>
+  </head>
+  <body>
+    <nav class="nav" style="background: lightblue">
+      <div class="nav-center">
+        <div class="nav-logos">
+          <h1 class="nav-logo">EL-Stores</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="featured.html" class="nav-link">featured</a></li>
+          <li><a href="about.html" class="nav-link">about</a></li>
+          <li><a href="products.html" class="nav-link">product</a></li>
+          <li><a href="#" class="nav-link">Sign-in</a></li>
+        </ul>
+        <div class="nav-logos">
+          <a href="cart.html" class="btn cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="item-count"></span>
+          </a>
+          <button class="btn nav-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section-center singleproduct-center">
+        <img
+          src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+          alt=""
+          class="singleproduct-img" />
+        <div class="singleProduct-text">
+          <h2>Title</h2>
+          <p>category</p>
+          <p>
+            Your perfect pack for everyday use and walks in the forest. Stash
+            your laptop (up to 15 inches) in the padded sleeve, your everyday
+          </p>
+          <div>
+            <p>price</p>
+            <button class="addCart" data-id="1">add to cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
