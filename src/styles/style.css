@@ -1,0 +1,328 @@
+@import url(//db.onlinewebfonts.com/c/c4d8819fda4c3fd79e36cedcc8d422bb?family=Halyard+Display);
+@import url(//db.onlinewebfonts.com/c/89248b0583721153668df86453b579de?family=Halyard+Text);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #1e266d;
+  --clr-primary-light: #455880;
+
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: 'Halyard Text', sans-serif;
+  --ff-secondary: 'Halyard Display', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  /* background: var(--clr-white); */
+  /* color: var(--clr-primary-light); */
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+  /* color: var(--clr-primary); */
+}
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  /* color: var(--clr-grey-5); */
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 0.5rem;
+  }
+  body {
+    font-size: 1.8rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+  color: #564e4e;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+/* Header */
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../imgs/header-bg.png') center center/cover no-repeat;
+  color: #ffffff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.nav-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-btn,
+.cart-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-logo {
+  font-size: 2.2rem;
+}
+
+.nav-links {
+  display: none;
+  font-size: 1.8rem;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 700px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+header {
+  /* background: blue; */
+  min-height: calc(100vh - 80px);
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: center;
+}
+
+.header-text {
+  max-width: 50.4rem;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 7rem 3rem;
+}
+
+.header-btn {
+  /* align-self: flex-start; */
+  margin: 2rem auto 0;
+  /* padding: 1rem 6rem; */
+  border-radius: 100rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  width: 70%;
+}
+
+.header-search {
+  /* padding: 2rem 5rem; */
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  display: block;
+}
+
+.header-search::placeholder {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.glass {
+  color: #a09386;
+  height: 3.8rem;
+  width: 3.8rem;
+  line-height: 3.8rem;
+  border-radius: 50%;
+  background: rgba(250, 245, 242, 1);
+  display: block;
+}
+
+/* FEATURED */
+.section-title {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 4rem;
+}
+.section-title h2 {
+  font-size: 3.6rem;
+}
+
+.featured-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 4rem;
+}
+article {
+  /* background: blue; */
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.product {
+  color: #564e4e;
+  text-align: center;
+  display: block;
+}
+
+.img-container {
+  height: 30rem;
+  margin-bottom: 1rem;
+}
+
+.product-img {
+  height: 100%;
+  object-fit: scale-down;
+}
+.product-title {
+  font-size: 1.6rem;
+  min-height: 5rem;
+  margin-bottom: 0;
+}
+
+.product-category,
+.product-details {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.product-text {
+  text-align: center;
+  /* background: blue; */
+}
+
+.addCart {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background: hsla(6, 87%, 75%, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

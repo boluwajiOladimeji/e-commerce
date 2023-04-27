@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/style.css" />
+
+    <!-- script -->
+    <script src="./src/js/index.js" type="module" defer></script>
+    <title>Elias Store</title>
+  </head>
+  <body>
+    <div class="home">
+      <nav class="nav">
+        <div class="nav-center">
+          <div class="nav-logos">
+            <h1 class="nav-logo">EL-Stores</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="featured.html" class="nav-link">featured</a></li>
+            <li><a href="about.html" class="nav-link">about</a></li>
+            <li><a href="about.html" class="nav-link">about</a></li>
+            <li><a href="#" class="nav-link">Sign-in</a></li>
+          </ul>
+          <div class="nav-logos">
+            <a href="cart.html" class="btn cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="item-count"></span>
+            </a>
+            <button class="btn nav-btn">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="header-container">
+          <h1 header-title>
+            Make Your Interior More <br />Minimaistic & Modern
+          </h1>
+          <p class="header-text">
+            Bringing interiors to life, understanding the person or people
+            living in a home is far greater need in design.
+          </p>
+          <button class="header-btn">
+            <input
+              type="text"
+              class="header-search"
+              placeholder="Search products" /><span
+              ><i class="fa-solid fa-magnifying-glass glass"></i
+            ></span>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <!-- FEATURED SECTION -->
+    <section class="section">
+      <div class="section-title">
+        <h2>featured products</h2>
+      </div>
+      <div class="section-center featured-center">
+        <!-- single product -->
+        <article>
+          <a
+            href="./src/pages/singleProduct.html?id=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product"
+            data-id="1">
+            <div class="img-container">
+              <img
+                src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                alt="shirt"
+                class="product-img" />
+            </div>
+            <h3 class="product-title">Mens Casual Premium Slim Fit T-Shirts</h3>
+          </a>
+
+          <div class="product-text">
+            <p class="product-category">men's clothing</p>
+            <div class="price rating product-details">
+              <p class="rating">
+                4.1 <span class="people-count">(256)</span> rating
+              </p>
+              <p class="price">$3.80</p>
+            </div>
+
+            <button class="addCart" data-id="1">add to cart</button>
+          </div>
+        </article>
+        <!-- end of single Product -->
+        <!-- single product -->
+        <article>
+          <a
+            href="./src/pages/singleProduct.html/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product"
+            data-id="1">
+            <div class="img-container">
+              <img
+                src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+                alt="shirt"
+                class="product-img" />
+            </div>
+            <h3 class="product-title">
+              Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA)
+              – Super Ultrawide Screen QLED
+            </h3>
+          </a>
+
+          <div class="product-text">
+            <p class="product-category">men's clothing</p>
+            <div class="price rating product-details">
+              <p class="rating">
+                4.1 <span class="people-count">(256)</span> rating
+              </p>
+              <p class="price">$3.80</p>
+            </div>
+
+            <button class="addCart" data-id="1">add to cart</button>
+          </div>
+        </article>
+        <!-- end of single Product -->
+        <!-- single product -->
+        <article>
+          <a
+            href="./src/pages/singleProduct.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product">
+            <div class="img-container">
+              <img
+                src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+                alt="shirt"
+                class="product-img" />
+            </div>
+            <h3 class="product-title">
+              Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA)
+              – Super Ultrawide Screen QLED
+            </h3>
+          </a>
+
+          <div class="product-text">
+            <p class="product-category">men's clothing</p>
+            <div class="price rating product-details">
+              <p class="rating">
+                4.1 <span class="people-count">(256)</span> rating
+              </p>
+              <p class="price">$3.80</p>
+            </div>
+
+            <button class="addCart">add to cart</button>
+          </div>
+        </article>
+        <!-- end of single Product -->
+      </div>
+    </section>
+  </body>
+</html>
