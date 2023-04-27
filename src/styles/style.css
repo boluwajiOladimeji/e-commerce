@@ -227,7 +227,7 @@ header {
 
 @media screen and (min-width: 700) {
   header {
-    max-height: 15rem;
+    max-height: 12rem;
   }
 }
 
