@@ -22,3 +22,37 @@
     margin-top: 0;
   }
 }
+.cart p {
+  margin: 0;
+}
+
+.cart-img {
+  width: 5rem;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.update-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.increase-btn,
+.reduce-btn,
+.removeCart {
+  background: none;
+  height: 3rem;
+  width: 2rem;
+  /* font-size: 3rem; */
+  line-height: 3rem;
+}
+
+.total {
+  text-align: right;
+}
