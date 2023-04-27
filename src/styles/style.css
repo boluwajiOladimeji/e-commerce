@@ -206,7 +206,7 @@ nav {
 
 header {
   /* background: blue; */
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 8rem);
   display: flex;
   /* align-items: center; */
   justify-content: center;
