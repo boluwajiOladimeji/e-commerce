@@ -1,6 +1,7 @@
 import { store, setupStore } from './setupStore.js';
 import { getElement, getStorageItem } from './store.js';
 import { fetchProducts } from './getProducts.js';
+
 // import { getSearchValue } from './index.js';
 // import { homeSearchEl, headerSearchEl, myVal } from './index.js';
 
@@ -10,7 +11,7 @@ const searchInputEl = getElement('.search-input');
 
 const checkSearch = function () {
   let searchValue = getStorageItem('searchValue');
-  if (!searchValue) return;
+  if (!searchValue || searchValue.length < 1) return;
   console.log(searchValue);
   let filteredProducts = store.filter((product) =>
     product.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -20,7 +21,7 @@ const checkSearch = function () {
   } else {
     displayProducts(getElement('.products-container'), filteredProducts);
   }
-  localStorage.removeItem(searchValue);
+  localStorage.removeItem('searchValue');
 };
 
 // getSearchValue();
