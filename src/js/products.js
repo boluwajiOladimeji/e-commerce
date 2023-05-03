@@ -1,10 +1,28 @@
 import { store, setupStore } from './setupStore.js';
 import { getElement, getStorageItem } from './store.js';
 import { fetchProducts } from './getProducts.js';
+// import { getSearchValue } from './index.js';
+// import { homeSearchEl, headerSearchEl, myVal } from './index.js';
 
 const productsCategoriesEl = getElement('.product-categories');
-const searchInputEl = getElement('.search-input');
 const productsContainerEl = getElement('.products-container');
+const searchInputEl = getElement('.search-input');
+
+const checkSearch = function () {
+  let searchValue = getStorageItem('searchValue');
+  if (!searchValue) return;
+  console.log(searchValue);
+  let filteredProducts = store.filter((product) =>
+    product.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
+  if (filteredProducts.length < 1) {
+    productsContainerEl.innerHTML = `<h3>Sorry, No item matched your search!!!</h3>`;
+  } else {
+    displayProducts(getElement('.products-container'), filteredProducts);
+  }
+};
+
+// getSearchValue();
 
 const init = async () => {
   if (store.length < 1) {
@@ -15,6 +33,7 @@ const init = async () => {
   displayProducts(getElement('.products-container'), store);
   setCategories(store);
   setSearch();
+  checkSearch();
 };
 
 const displayProducts = function (element, data) {

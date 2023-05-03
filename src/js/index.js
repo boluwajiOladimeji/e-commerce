@@ -1,8 +1,10 @@
 import './sidebar.js';
 import { fetchProducts } from './getProducts.js';
 import { setupStore } from './setupStore.js';
-import { getElement } from './store.js';
+import { getElement, setStorageItem } from './store.js';
 
+const homeSearchEl = getElement('.home-search');
+const headerSearchEl = getElement('.header-search');
 const products = async function () {
   const data = await fetchProducts();
   setupStore(data);
@@ -51,3 +53,18 @@ const displayProducts = function (element, data) {
     }
   });
 };
+
+const getSearchValue = function () {
+  // searchInputEl.addEventListener('click');
+  let value;
+  homeSearchEl.addEventListener('click', (e) => {
+    value = headerSearchEl.value;
+    console.log(value);
+    setStorageItem('searchValue', value);
+    headerSearchEl.value = '';
+  });
+};
+
+getSearchValue();
+
+// export { homeSearchEl, headerSearchEl, myVal };
