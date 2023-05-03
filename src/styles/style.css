@@ -176,6 +176,11 @@ nav {
 
 .nav-logo {
   font-size: 3rem;
+  color: #fff;
+}
+
+.nav-logo:visited {
+  color: #fff;
 }
 
 .nav-links {
