@@ -2,8 +2,7 @@ import { store, setupStore } from './setupStore.js';
 import { getElement, getStorageItem } from './store.js';
 import { fetchProducts } from './getProducts.js';
 
-const btn = getElement('.product-categories');
-console.log(btn);
+const productsCategoriesEl = getElement('.product-categories');
 
 const init = async () => {
   if (store.length < 1) {
@@ -12,6 +11,7 @@ const init = async () => {
   }
 
   displayProducts(getElement('.products-container'), store);
+  setCategories(store);
 };
 
 const displayProducts = function (element, data) {
@@ -50,6 +50,20 @@ const displayProducts = function (element, data) {
         </article>
         `;
     element.insertAdjacentHTML('beforeend', html);
+  });
+};
+
+const setCategories = function (store) {
+  const categories = [
+    'All',
+    ...new Set(store.map((product) => product.category)),
+  ];
+  console.log(categories);
+  categories.map((category) => {
+    let html = `<span class="btn-category" data-category="${category}">
+              ${category.toUpperCase()}
+            </span>`;
+    productsCategoriesEl.insertAdjacentHTML('beforeend', html);
   });
 };
 
