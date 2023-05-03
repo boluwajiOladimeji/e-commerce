@@ -20,6 +20,7 @@ const checkSearch = function () {
   } else {
     displayProducts(getElement('.products-container'), filteredProducts);
   }
+  localStorage.removeItem(searchValue);
 };
 
 // getSearchValue();
