@@ -72,6 +72,7 @@
   margin: 0;
   font-size: 1.1rem;
   cursor: pointer;
+  color: crimson;
 }
 
 @media screen and (min-width: 750px) {
