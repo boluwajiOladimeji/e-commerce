@@ -7,4 +7,4 @@ const setupStore = (products) => {
   setStorageItem('store', store);
 };
 
-export { setupStore };
+export { store, setupStore };

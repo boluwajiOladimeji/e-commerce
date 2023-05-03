@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+
+    <!-- <link rel="stylesheet" href="./src/styles/product.css" /> -->
+
+    <!-- script -->
+    <title>Elias Store</title>
+  </head>
+  <body>
+    <nav class="nav" style="background: lightblue">
+      <div class="nav-center">
+        <div class="nav-logos">
+          <h1 class="nav-logo">EL-Stores</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="featured.html" class="nav-link">featured</a></li>
+          <li><a href="about.html" class="nav-link">about</a></li>
+          <li><a href="products.html" class="nav-link">product</a></li>
+          <li><a href="#" class="nav-link">Sign-in</a></li>
+        </ul>
+        <div class="nav-logos">
+          <a href="cart.html" class="btn cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="item-count"></span>
+          </a>
+          <button class="btn nav-btn open-sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section-center products-center">
+        <div>
+          <h3>Categories</h3>
+          <article class="product-categories">
+            <span class="btn-category" data-category="category">All</span>
+            <span class="btn-category" data-category="category"> clothes </span>
+            <span class="btn-category" data-category="category">shoes</span>
+          </article>
+        </div>
+
+        <div class="products-container">
+          <!-- single product -->
+          <!-- <article>
+            <a
+              href="./src/pages/product.html?id=1"
+              rel="noopener noreferrer"
+              class="product"
+              data-id="1">
+              <div class="img-container">
+                <img
+                  src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                  alt="shirt"
+                  class="product-img" />
+              </div>
+
+              <h3 class="product-title">
+                Mens Casual Premium Slim Fit T-Shirts
+              </h3>
+            </a>
+
+            <div class="product-text">
+              <p class="product-category">men's clothing</p>
+              <div class="price rating product-details">
+                <p class="rating">
+                  4.1 <span class="people-count">(256)</span> rating
+                </p>
+                <p class="price">$3.80</p>
+              </div>
+
+              <button class="addCart" data-id="1">add to cart</button>
+            </div> -->
+          <!-- </article> -->
+          <!-- end of single Product -->
+          <!-- single product -->
+        </div>
+      </div>
+    </section>
+    <div class="sidebar">
+      <div>
+        <button class="sidebar-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="sidebar-links">
+        <li><a href="featured.html" class="sidebar-link">featured</a></li>
+        <li><a href="about.html" class="sidebar-link">about</a></li>
+        <li>
+          <a href="./src/pages/products.html" class="sidebar-link">Products</a>
+        </li>
+        <li><a href="#" class="sidebar-link">Sign-in</a></li>
+      </ul>
+    </div>
+    <script src="../js/products.js" type="module"></script>
+  </body>
+</html>

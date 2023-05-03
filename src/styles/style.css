@@ -1,12 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/c4d8819fda4c3fd79e36cedcc8d422bb?family=Halyard+Display);
 @import url(//db.onlinewebfonts.com/c/89248b0583721153668df86453b579de?family=Halyard+Text);
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --clr-primary: #1e266d;
   --clr-primary-light: #455880;
@@ -205,6 +199,10 @@ nav {
   .nav-btn {
     display: none;
   }
+}
+
+button {
+  display: inline-block;
 }
 
 header {

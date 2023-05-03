@@ -6,17 +6,16 @@ export const getElement = (selection) => {
   );
 };
 
-const getStorageItem = function (data) {
+export const getStorageItem = function (data) {
   let storeItem = localStorage.getItem(data);
   if (storeItem) {
     storeItem = JSON.parse(localStorage.getItem(data));
   } else {
     storeItem = [];
   }
+  return storeItem;
 };
 
-const setStorageItem = (name, data) => {
+export const setStorageItem = (name, data) => {
   localStorage.setItem(name, JSON.stringify(data));
 };
-
-export { getStorageItem, setStorageItem };

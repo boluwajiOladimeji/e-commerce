@@ -6,7 +6,7 @@ import { getElement } from './store.js';
 const products = async function () {
   const data = await fetchProducts();
   setupStore(data);
-  console.log(data);
+  //   console.log(data);
   displayProducts(getElement('.featured-center'), data);
   return data;
 };
@@ -16,7 +16,7 @@ products();
 const displayProducts = function (element, data) {
   data.filter((product, idx) => {
     if (idx < 3) {
-      console.log(product.image);
+      //   console.log(product.image);
       const html = `
              <article>
           <a
