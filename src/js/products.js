@@ -4,6 +4,7 @@ import { fetchProducts } from './getProducts.js';
 
 const productsCategoriesEl = getElement('.product-categories');
 const searchInputEl = getElement('.search-input');
+const productsContainerEl = getElement('.products-container');
 
 const init = async () => {
   if (store.length < 1) {
@@ -86,13 +87,16 @@ productsCategoriesEl.addEventListener('click', (e) => {
 });
 
 const setSearch = function () {
-  let filteredProducts = [];
   searchInputEl.addEventListener('keyup', (e) => {
     let val = searchInputEl.value;
-    filteredProducts = store.filter((product) =>
+    let filteredProducts = store.filter((product) =>
       product.title.toLowerCase().includes(val.toLowerCase())
     );
-    displayProducts(getElement('.products-container'), filteredProducts);
+    if (filteredProducts.length < 1) {
+      productsContainerEl.innerHTML = `<h3>Sorry, No item matched your search!!!</h3>`;
+    } else {
+      displayProducts(getElement('.products-container'), filteredProducts);
+    }
   });
 };
 
