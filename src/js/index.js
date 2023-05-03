@@ -58,7 +58,7 @@ const getSearchValue = function () {
   // searchInputEl.addEventListener('click');
   let value;
   homeSearchEl.addEventListener('click', (e) => {
-    value = headerSearchEl.value;
+    value = headerSearchEl.value.toLowerCase();
     console.log(value);
     setStorageItem('searchValue', value);
     headerSearchEl.value = '';
