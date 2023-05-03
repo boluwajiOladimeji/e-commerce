@@ -100,3 +100,9 @@
   width: 10rem;
   margin: 0 auto;
 }
+
+.serach-input {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
