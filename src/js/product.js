@@ -1,6 +1,6 @@
 import './sidebar.js';
 import './setUpCart.js';
-import { addToCart } from './setUpCart.js';
+import { addToCart, displayItemCount } from './setUpCart.js';
 
 import { getElement } from './store.js';
 const singleProductCenter = getElement('.singleproduct-center');
@@ -18,6 +18,7 @@ const init = async () => {
   const data = await fetchProduct();
   // console.log(data);
   displaySingleProduct(data);
+  displayItemCount();
 };
 
 const displaySingleProduct = function (data) {

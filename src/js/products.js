@@ -2,7 +2,7 @@ import { store, setupStore } from './setupStore.js';
 import { getElement, getStorageItem } from './store.js';
 import { fetchProducts } from './getProducts.js';
 import './setUpCart.js';
-import { addToCart } from './setUpCart.js';
+import { addToCart, displayItemCount } from './setUpCart.js';
 
 // import { getSearchValue } from './index.js';
 // import { homeSearchEl, headerSearchEl, myVal } from './index.js';
@@ -39,6 +39,7 @@ const init = async () => {
   setCategories(store);
   setSearch();
   checkSearch();
+  displayItemCount();
 };
 
 const displayProducts = function (element, data) {
