@@ -1,5 +1,9 @@
 import './sidebar.js';
+import './setUpCart.js';
+import { addToCart } from './setUpCart.js';
+
 import { getElement } from './store.js';
+const singleProductCenter = getElement('.singleproduct-center');
 
 const fetchProduct = async function () {
   const param = new URLSearchParams(window.location.search);
@@ -36,5 +40,12 @@ const displaySingleProduct = function (data) {
   const element = getElement('.singleproduct-center');
   element.innerHTML = html;
 };
+
+singleProductCenter.addEventListener('click', (e) => {
+  if (e.target.classList.contains('addCart')) {
+    const id = +e.target.dataset.id;
+    addToCart(id);
+  }
+});
 
 init();

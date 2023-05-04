@@ -1,10 +1,14 @@
 import './sidebar.js';
 import { fetchProducts } from './getProducts.js';
-import { setupStore } from './setupStore.js';
+import { setupStore, store } from './setupStore.js';
 import { getElement, setStorageItem } from './store.js';
+import './setUpCart.js';
+import { addToCart } from './setUpCart.js';
 
 const homeSearchEl = getElement('.home-search');
 const headerSearchEl = getElement('.header-search');
+const featuredCenter = getElement('.featured-center');
+
 const products = async function () {
   const data = await fetchProducts();
   setupStore(data);
@@ -45,7 +49,7 @@ const displayProducts = function (element, data) {
               <p class="price">$${product.price}</p>
             </div>
 
-            <button class="addCart" data-id="1">add to cart</button>
+            <button class="addCart" data-id="${product.id}">add to cart</button>
           </div>
         </article>
         `;
@@ -66,5 +70,12 @@ const getSearchValue = function () {
 };
 
 getSearchValue();
+
+featuredCenter.addEventListener('click', (e) => {
+  if (e.target.classList.contains('addCart')) {
+    const id = +e.target.dataset.id;
+    addToCart(id);
+  }
+});
 
 // export { homeSearchEl, headerSearchEl, myVal };

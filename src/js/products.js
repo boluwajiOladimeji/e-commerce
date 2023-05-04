@@ -1,6 +1,8 @@
 import { store, setupStore } from './setupStore.js';
 import { getElement, getStorageItem } from './store.js';
 import { fetchProducts } from './getProducts.js';
+import './setUpCart.js';
+import { addToCart } from './setUpCart.js';
 
 // import { getSearchValue } from './index.js';
 // import { homeSearchEl, headerSearchEl, myVal } from './index.js';
@@ -70,7 +72,7 @@ const displayProducts = function (element, data) {
               <p class="price">$${product.price.toFixed(2)}</p>
             </div>
 
-            <button class="addCart" data-id="1">add to cart</button>
+            <button class="addCart" data-id="${product.id}">add to cart</button>
           </div>
         </article>
         `;
@@ -120,5 +122,12 @@ const setSearch = function () {
     }
   });
 };
+
+productsContainerEl.addEventListener('click', (e) => {
+  if (e.target.classList.contains('addCart')) {
+    const id = +e.target.dataset.id;
+    addToCart(id);
+  }
+});
 
 init();

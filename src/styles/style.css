@@ -159,6 +159,25 @@ nav {
   margin: 0;
 }
 
+.cart-btn {
+  position: relative;
+}
+
+.item-count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #333;
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  background: burlywood;
+  display: grid;
+  place-items: center;
+  line-height: 1.5rem;
+}
+
 .nav-logo {
   font-size: 3rem;
   color: #fff;
