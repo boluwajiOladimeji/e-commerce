@@ -33,9 +33,7 @@ function removeItem(id) {
 displayItemCount();
 
 function init() {
-  setInterval(function () {
-    displayItemCount();
-  }, 1);
+  displayItemCount();
 }
 
 init();

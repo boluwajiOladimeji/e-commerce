@@ -18,8 +18,6 @@ const products = async function () {
   return data;
 };
 
-products();
-
 const displayProducts = function (element, data) {
   data.filter((product, idx) => {
     if (idx < 3) {
@@ -76,8 +74,6 @@ headerSearchEl.addEventListener('keyup', (e) => {
   // headerSearchEl.value = '';
 });
 
-getSearchValue();
-
 window.addEventListener('scroll', (e) => {
   const navHeight = nav.getBoundingClientRect().height;
   const scrollHeight = window.pageYOffset;
@@ -96,6 +92,12 @@ featuredCenter.addEventListener('click', (e) => {
   }
 });
 
-displayItemCount();
+function init() {
+  products();
+  getSearchValue();
+  displayItemCount();
+}
+
+init();
 
 // export { homeSearchEl, headerSearchEl, myVal };
