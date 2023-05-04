@@ -14,7 +14,7 @@ const searchInputEl = getElement('.search-input');
 const checkSearch = function () {
   let searchValue = getStorageItem('searchValue');
   if (!searchValue || searchValue.length < 1) return;
-  console.log(searchValue);
+  // console.log(searchValue);
   let filteredProducts = store.filter((product) =>
     product.title.toLowerCase().includes(searchValue.toLowerCase())
   );
@@ -97,7 +97,7 @@ const setCategories = function (store) {
 
 productsCategoriesEl.addEventListener('click', (e) => {
   const category = e.target.dataset.category;
-  console.log(category);
+  // console.log(category);
   let filteredProducts = [];
   if (!category) return;
   if (category === 'All') {

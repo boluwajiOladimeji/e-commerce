@@ -276,6 +276,7 @@ header {
   border-radius: 50%;
   background: rgba(250, 245, 242, 1);
   display: block;
+  border: none;
 }
 
 /* FEATURED */

@@ -63,11 +63,17 @@ const getSearchValue = function () {
   let value;
   homeSearchEl.addEventListener('click', (e) => {
     value = headerSearchEl.value.toLowerCase();
-    console.log(value);
     setStorageItem('searchValue', value);
     headerSearchEl.value = '';
   });
 };
+
+headerSearchEl.addEventListener('keyup', (e) => {
+  let value = headerSearchEl.value.toLowerCase();
+  console.log(value);
+  setStorageItem('searchValue', value);
+  // headerSearchEl.value = '';
+});
 
 getSearchValue();
 
