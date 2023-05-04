@@ -30,8 +30,12 @@ function removeItem(id) {
   cart = cart.filter((product) => product.id !== id);
 }
 
+displayItemCount();
+
 function init() {
-  displayItemCount();
+  setInterval(function () {
+    displayItemCount();
+  }, 1);
 }
 
 init();

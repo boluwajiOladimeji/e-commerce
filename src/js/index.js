@@ -3,7 +3,7 @@ import { fetchProducts } from './getProducts.js';
 import { setupStore, store } from './setupStore.js';
 import { getElement, setStorageItem } from './store.js';
 import './setUpCart.js';
-import { addToCart } from './setUpCart.js';
+import { addToCart, displayItemCount } from './setUpCart.js';
 
 const homeSearchEl = getElement('.home-search');
 const headerSearchEl = getElement('.header-search');
@@ -95,5 +95,7 @@ featuredCenter.addEventListener('click', (e) => {
     addToCart(id);
   }
 });
+
+displayItemCount();
 
 // export { homeSearchEl, headerSearchEl, myVal };
