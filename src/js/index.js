@@ -8,6 +8,7 @@ import { addToCart } from './setUpCart.js';
 const homeSearchEl = getElement('.home-search');
 const headerSearchEl = getElement('.header-search');
 const featuredCenter = getElement('.featured-center');
+const nav = getElement('.nav');
 
 const products = async function () {
   const data = await fetchProducts();
@@ -76,6 +77,17 @@ headerSearchEl.addEventListener('keyup', (e) => {
 });
 
 getSearchValue();
+
+window.addEventListener('scroll', (e) => {
+  const navHeight = nav.getBoundingClientRect().height;
+  const scrollHeight = window.pageYOffset;
+
+  if (scrollHeight > navHeight) {
+    nav.classList.add('fixed');
+  } else {
+    nav.classList.remove('fixed');
+  }
+});
 
 featuredCenter.addEventListener('click', (e) => {
   if (e.target.classList.contains('addCart')) {

@@ -135,6 +135,8 @@ nav {
 .fixed {
   position: fixed;
   background: lightblue;
+  width: 100%;
+  opacity: 0.9;
 }
 
 .nav-center {

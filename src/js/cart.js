@@ -87,5 +87,16 @@ function init() {
   renderCart();
   checkTotal();
 }
+window.addEventListener('scroll', (e) => {
+  const nav = getElement('.nav');
+  const navHeight = nav.getBoundingClientRect().height;
+  const scrollHeight = window.pageYOffset;
+
+  if (scrollHeight > navHeight) {
+    nav.classList.add('fixed');
+  } else {
+    nav.classList.remove('fixed');
+  }
+});
 
 init();
