@@ -33,6 +33,7 @@ const init = async () => {
     const products = await fetchProducts();
     setupStore(products);
   }
+  productsContainerEl.innerHTML = `<h1>Loading ....</h1>`;
 
   displayProducts(getElement('.products-container'), store);
   setCategories(store);
