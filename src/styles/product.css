@@ -51,12 +51,13 @@
 
 .increase-btn,
 .reduce-btn,
-.removeCart {
+.remove-btn {
   background: none;
   height: 3rem;
   width: 2rem;
   /* font-size: 3rem; */
   line-height: 3rem;
+  cursor: pointer;
 }
 
 .total {

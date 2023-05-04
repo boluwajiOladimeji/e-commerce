@@ -132,6 +132,11 @@ nav {
   height: 8rem;
 }
 
+.fixed {
+  position: fixed;
+  background: lightblue;
+}
+
 .nav-center {
   display: flex;
   justify-content: space-between;

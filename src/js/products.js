@@ -86,7 +86,7 @@ const setCategories = function (store) {
     'All',
     ...new Set(store.map((product) => product.category)),
   ];
-  console.log(categories);
+  // console.log(categories);
   categories.map((category) => {
     let html = `<span class="btn-category" data-category="${category}">
               ${category.toUpperCase()}

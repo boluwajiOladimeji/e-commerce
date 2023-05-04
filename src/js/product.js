@@ -16,7 +16,7 @@ const fetchProduct = async function () {
 
 const init = async () => {
   const data = await fetchProduct();
-  console.log(data);
+  // console.log(data);
   displaySingleProduct(data);
 };
 
